@@ -32,6 +32,10 @@ app.post('/user', bodyParser, async (req, res, next) => {
     res.status(201).send(user);
 });
 
+app.get('/user', (req, res, next) => {
+    res.send(db);
+})
+
 
 server.listen(PORT, () => {
     console.log(`App is started on port ${PORT}`);
